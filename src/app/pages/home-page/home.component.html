@@ -1,0 +1,20 @@
+<div class="row" id="introduction">
+	<div class="col-12">
+		<h1 class="dark-blue">Desafio</h1>
+		<hr>
+			
+		<div class="ng-class" [ngClass]="{'ng-class--red': ifTrue,
+						'ng-class--blue': !ifTrue
+		}" 
+		(click)="onClick()">
+		</div>
+
+		<div *ngIf="ifTrue">If é true</div>
+		<div *ngIf="!ifTrue">If é false</div>
+
+		<ul>
+			<li *ngFor="let curso of cursos, let i = index;">
+				{{ i }} - {{ curso }}
+			</li>
+		</ul>
+</div>
